@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://b144k4jtoabbq"]
 
 [ext_resource type="Script" uid="uid://d1py2nd2txs4w" path="res://IntroPage.cs" id="1_yohr4"]
+[ext_resource type="Texture2D" uid="uid://ceh53xtflkat0" path="res://Assets/PathsUnwritten_Background.png" id="2_wojqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn52w"]
+bg_color = Color(0.9169982, 0.8396116, 0.4108382, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnk0h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbulb"]
+bg_color = Color(0.8352941, 0.7058824, 0.23137255, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
 
 [node name="IntroPage" type="Control" unique_id=26536951]
 layout_mode = 3
@@ -11,7 +30,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yohr4")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1412129567]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wojqv")
+expand_mode = 1
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=450764413]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,34 +52,43 @@ color = Color(0.9625525, 0.9302852, 0.78181136, 1)
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1969923653]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 39.0
-offset_right = 770.0
-offset_bottom = 108.0
+offset_left = 183.0
+offset_top = 99.0
+offset_right = 529.0
+offset_bottom = 240.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 45
 text = "Paths Unwritten"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="IntroductionLabel" type="Label" parent="." unique_id=1904651787]
 layout_mode = 0
-offset_left = -101.0
-offset_top = 134.0
-offset_right = 1264.0
-offset_bottom = 370.0
+offset_left = 154.0
+offset_top = 287.0
+offset_right = 553.0
+offset_bottom = 489.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_constants/line_spacing = 3
+theme_override_font_sizes/font_size = 25
 text = "Welcome to Paths Unwritten. 
+
 Your choices will shape the story and decide what happens next."
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="StartButton" type="Button" parent="." unique_id=502625612]
 layout_mode = 0
-offset_left = 426.0
-offset_top = 260.0
-offset_right = 713.0
-offset_bottom = 330.0
+offset_left = 662.0
+offset_top = 259.0
+offset_right = 949.0
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(0.2492854, 0.16142228, 0.0060328767, 1)
+theme_override_colors/font_hover_color = Color(0.2509804, 0.16078432, 0.007843138, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rn52w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cnk0h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bbulb")
 action_mode = 0
 text = "Start Reading"
 

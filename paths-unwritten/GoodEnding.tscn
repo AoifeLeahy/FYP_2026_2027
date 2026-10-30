@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bo17p5cs1j3b4"]
+
+[ext_resource type="Script" uid="uid://bo52lffrl4lfu" path="res://GoodEnding.cs" id="1_jg538"]
+[ext_resource type="Texture2D" uid="uid://ceh53xtflkat0" path="res://Assets/PathsUnwritten_Background.png" id="1_v8bva"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shulr"]
+bg_color = Color(0.34610954, 0.41684502, 0.2256709, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GoodEnding" type="Control" unique_id=807701312]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jg538")
+
+[node name="BookBackground" type="TextureRect" parent="." unique_id=1020087507]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v8bva")
+expand_mode = 1
+
+[node name="EndingTitle" type="Label" parent="." unique_id=988284491]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 227.0
+offset_right = 486.0
+offset_bottom = 368.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "GOOD ENDING"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="EndingMessage" type="Label" parent="." unique_id=1558251405]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 158.0
+offset_right = 984.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "You follow the lanterns deeper into the forest. They lead you to a beautiful clearing, where you discover a safe way home. You made the right choice!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ReadAgainButton" type="Button" parent="." unique_id=2097791930]
+layout_mode = 0
+offset_left = 693.0
+offset_top = 408.0
+offset_right = 891.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_shulr")
+text = "Read Again
+"
